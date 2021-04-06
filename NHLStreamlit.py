@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # Import the data
-nhl_df = pd.read_csv("NHL_Cleaned.csv")
+nhl_df = pd.read_csv("https://media.githubusercontent.com/media/Roman-Seipel/DataDive_3/main/NHL_Cleaned.csv")
 
 # Check if the goalie is in the dictionary
 def In_Dict(shot, dict):
@@ -148,7 +148,6 @@ for shot in range(len(nhl_df)):
                                                                 nhl_df["shotType__SNAP"][shot], nhl_df["shotType__TIP"][shot], nhl_df["shotType__WRAP"][shot],
                                                                 nhl_df["shotType__WRIST"][shot]))
     else:
-        print(nhl_df)
         shots_on_goalie[nhl_df["goalieNameForShot"][shot]] = [(nhl_df["arenaAdjustedXCordABS"][shot], nhl_df["yCord"][shot], nhl_df["goal"][shot],
                                                                 nhl_df["shotType__BACK"][shot], nhl_df["shotType__DEFL"][shot], nhl_df["shotType__SLAP"][shot],
                                                                 nhl_df["shotType__SNAP"][shot], nhl_df["shotType__TIP"][shot], nhl_df["shotType__WRAP"][shot],
