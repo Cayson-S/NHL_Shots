@@ -148,6 +148,7 @@ for shot in range(len(nhl_df)):
                                                                 nhl_df["shotType__SNAP"][shot], nhl_df["shotType__TIP"][shot], nhl_df["shotType__WRAP"][shot],
                                                                 nhl_df["shotType__WRIST"][shot]))
     else:
+        print(nhl_df)
         shots_on_goalie[nhl_df["goalieNameForShot"][shot]] = [(nhl_df["arenaAdjustedXCordABS"][shot], nhl_df["yCord"][shot], nhl_df["goal"][shot],
                                                                 nhl_df["shotType__BACK"][shot], nhl_df["shotType__DEFL"][shot], nhl_df["shotType__SLAP"][shot],
                                                                 nhl_df["shotType__SNAP"][shot], nhl_df["shotType__TIP"][shot], nhl_df["shotType__WRAP"][shot],
