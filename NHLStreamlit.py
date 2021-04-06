@@ -159,6 +159,7 @@ st.sidebar.title("Filters")
 goalie = st.sidebar.selectbox("Choose a Goalie", list(shots_on_goalie.keys()))
 save = st.sidebar.selectbox("Choose a Shot Type", ["all", "saves", "goals"])
 # Create the graphs
+st.set_option('deprecation.showPyplotGlobalUse', False)
 scatter_image = st.pyplot(Goalie_Save_Plot(shots_on_goalie[goalie], save))
 bar_image = st.pyplot(Shot_Type(shots_on_goalie[goalie], save))
 bar_of_total_image = st.pyplot(Percent_Of_Shots(shots_on_goalie[goalie]))
